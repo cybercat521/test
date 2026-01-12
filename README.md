@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="resources/logo.png" alt="Dexbotic Logo" width="280"/>
+  <img src="logo.png" alt="Dexbotic Logo" width="280"/>
 
   # Dexbotic：一站式具身智能 VLA 开发工具箱
 
@@ -24,7 +24,7 @@
 - **混合训练支持**：无缝衔接云端与本地环境，支持阿里云、火山引擎等大规模云端集群，统计适配消费级 GPU 进行本地训练。
 - **广泛的机器人适配**：针对 UR5、Franka 和 ALOHA 等主流机器人平台，提供了**统一的训练数据格式**，大幅降低数据处理成本。
 
-![](resources/intro.jpeg)
+![](intro.jpeg)
 
 ## 🔥 最新动态
 
