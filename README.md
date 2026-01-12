@@ -1,7 +1,7 @@
 <div align="center">
   <img src="logo.png" alt="Dexbotic Logo" width="280"/>
 
-  # Dexbotic：一站式具身智能 VLA 开发工具箱
+  # 一站式具身智能 VLA 开发工具箱
 
   [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
   [![Python](https://img.shields.io/badge/Python-3.8%2B-blue)](https://www.python.org/)
@@ -69,32 +69,8 @@ pip install -e .
 
 以下展示了基于 Dexbotic 训练的模型与原始模型在主流仿真环境下的评测结果对比。*(注：加粗项为该任务下的最佳表现)*
 
-| 仿真环境 | 模型 | 分数 | 配置文件 | 权重 |
-| --- | --- | --- | --- | --- |
-| **Libero** | CogACT | 93.6 | - | - |
-|  | **DB-CogACT** | **94.9** | [`libero_cogact.py`](https://www.google.com/search?q=playground/benchmarks/libero/libero_cogact.py) | [🤗 HF](https://huggingface.co/Dexmal/libero-db-cogact) |
-|  | π0 | 94.2 | - | - |
-|  | DB-π0 | 93.9 | [`libero_pi0.py`](https://www.google.com/search?q=playground/benchmarks/libero/libero_pi0.py) | [🤗 HF](https://huggingface.co/Dexmal/libero-db-pi0) |
-|  | MemVLA | 96.7 | - | - |
-|  | **DB-MemVLA** | **97.0** | [`libero_memvla.py`](https://www.google.com/search?q=playground/benchmarks/libero/libero_memvla.py) | [🤗 HF](https://huggingface.co/Dexmal/libero-db-memvla) |
-| **CALVIN** | CogACT | 3.246 | - | - |
-|  | **DB-CogACT** | **4.063** | [`calvin_cogact.py`](https://www.google.com/search?q=playground/benchmarks/calvin/calvin_cogact.py) | [🤗 HF](https://huggingface.co/Dexmal/calvin-db-cogact) |
-|  | OFT | 3.472 | - | - |
-|  | DB-OFT | 3.540 | [`calvin_oft.py`](https://www.google.com/search?q=playground/benchmarks/calvin/calvin_oft.py) | [🤗 HF](https://huggingface.co/Dexmal/calvin-db-oft) |
-| **SimplerEnv** | CogACT | 51.25 | - | - |
-|  | DB-CogACT | 69.45 | [`simpler_cogact.py`](https://www.google.com/search?q=playground/benchmarks/simpler/simpler_cogact.py) | [🤗 HF](https://huggingface.co/Dexmal/simpler-db-cogact) |
-|  | OFT | 30.23 | - | - |
-|  | DB-OFT | 76.39 | [`simpler_oft.py`](https://www.google.com/search?q=playground/benchmarks/simpler/simpler_oft.py) | [🤗 HF](https://huggingface.co/Dexmal/simpler-db-oft) |
-|  | MemVLA | 71.9 | - | - |
-|  | **DB-MemVLA** | **84.4** | [`simpler_memvla.py`](https://www.google.com/search?q=playground/benchmarks/simpler/simpler_memvla.py) | [🤗 HF](https://huggingface.co/Dexmal/simpler-db-memvla) |
-| **ManiSkill2** | CogACT | 40.0 | - | - |
-|  | DB-CogACT | 58.0 | [`maniskill2_cogact.py`](https://www.google.com/search?q=playground/benchmarks/maniskill2/maniskill2_cogact.py) | [🤗 HF](https://huggingface.co/Dexmal/maniskill2-db-cogact) |
-|  | OFT | 21.0 | - | - |
-|  | DB-OFT | 63.0 | [`maniskill2_oft.py`](https://www.google.com/search?q=playground/benchmarks/maniskill2/maniskill2_oft.py) | [🤗 HF](https://huggingface.co/Dexmal/maniskill2-db-oft) |
-|  | **π0** | **66.0** | - | - |
-|  | DB-π0 | 65.0 | [`maniskill2_pi0.py`](https://www.google.com/search?q=playground/benchmarks/maniskill2/maniskill2_pi0.py) | [🤗 HF](https://huggingface.co/Dexmal/maniskill2-db-pi0) |
-| **RoboTwin2.0** | CogACT | 43.8 | - | - |
-|  | **DB-CogACT** | **58.5** | [`robotwin2_cogact.py`](https://www.google.com/search?q=playground/benchmarks/robotwin2/robotwin2_cogact.py) | [🤗 HF](https://huggingface.co/Dexmal/robotwin-db-cogact) |
+![](demo.png)
+
 
 📊 **查看更多详细评测结果**: [Simulation Results](https://dexbotic.com/docs/7.%20Simulation%20Results.html)
 
