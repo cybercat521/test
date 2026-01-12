@@ -1,0 +1,127 @@
+<div align="center">
+  <img src="resources/logo.png" alt="Dexbotic Logo" width="280"/>
+
+  # Dexbotic：一站式具身智能 VLA 开发工具箱
+
+  [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
+  [![Python](https://img.shields.io/badge/Python-3.8%2B-blue)](https://www.python.org/)
+  [![Paper](https://img.shields.io/badge/Paper-arXiv-b31b1b.svg)](docs/Dexbotic_Tech_Report.pdf)
+  [![Documentation](https://img.shields.io/badge/Docs-Online-success)](https://dexbotic.com/docs/)
+
+  <p align="center">
+    <strong>预训练 · 微调 · 推理 · 评测</strong><br>
+    支持 Pi0、CogACT、OFT、MemoryVLA 等主流策略
+  </p>
+</div>
+
+## 简介
+
+**Dexbotic** 旨在为具身智能研究提供一个统一、高效的 VLA（视觉-语言-动作）开发工具箱。它内置了多种主流 VLA 模型的环境配置，用户只需简单的设置即可复现、微调和推理各种前沿算法。
+
+- **开箱即用的 VLA 框架**：以 VLA 模型为核心，集成了具身操作和导航功能，原生支持多种业内领先的策略。
+- **强大的预训练基座**：针对 Pi0 和 CogACT 等主流策略，提供了多个基于 Dexbotic 优化的预训练模型。
+- **模块化开发架构**：采用“分层配置 + 工厂注册 + 入口分发”的设计模式。用户只需修改配置脚本，即可轻松完成参数修改、模型更换或任务扩展。
+- **混合训练支持**：无缝衔接云端与本地环境，支持阿里云、火山引擎等大规模云端集群，统计适配消费级 GPU 进行本地训练。
+- **广泛的机器人适配**：针对 UR5、Franka 和 ALOHA 等主流机器人平台，提供了**统一的训练数据格式**，大幅降低数据处理成本。
+
+![](resources/intro.jpeg)
+
+## 🔥 最新动态
+
+- **[2026-01-08]** 🆕 新增 **联合训练 (Co-training)** 能力，支持对 CogACT 模型的动作专家和 LLM 进行联合优化。同时发布适配 **Blackwell GPU** 的专用镜像。
+- **[2025-12-29]** 全面支持 **OFT** 和 **Pi0.5** 模型。
+- **[2025-10-20]** Dexbotic 正式发布！详情请查阅 [技术报告](docs/Dexbotic_Tech_Report.pdf) 和 [官方文档](https://dexbotic.com/docs/)。
+
+
+## 快速开始
+
+我们强烈推荐使用 Docker 进行开发或部署，以获得最佳的使用体验。
+
+### 1. 安装与环境配置
+
+```bash
+# 1. 克隆代码仓库
+git clone https://github.com/dexmal/dexbotic.git
+
+# 2. 启动 Docker 容器 (推荐)
+docker run -it --rm --gpus all --network host \
+  -v $(pwd)/dexbotic:/dexbotic \
+  dexmal/dexbotic \
+  bash
+
+# 3. 激活环境并安装依赖
+cd /dexbotic
+conda activate dexbotic
+pip install -e .
+```
+
+> **系统要求**：Ubuntu 20.04/22.04，推荐使用 RTX 4090、A100 或 H100（训练建议 8 GPU，部署需 1 GPU）。
+
+### 2. 使用指南
+
+- [运行预训练模型](https://dexbotic.com/docs/2.%20Get%20Start.html#_2-run-a-pretrained-model)
+- [基于仿真数据训练](https://dexbotic.com/docs/2.%20Get%20Start.html#_3-train-on-provided-simulator-data)
+- [测试与评估](https://dexbotic.com/docs/2.%20Get%20Start.html#_4-test-your-trained-model)
+- [完整的使用手册](https://dexbotic.com/docs/)
+
+
+## 基准测试
+
+以下展示了基于 Dexbotic 训练的模型与原始模型在主流仿真环境下的评测结果对比。*(注：加粗项为该任务下的最佳表现)*
+
+| 仿真环境 | 模型 | 分数 | 配置文件 | 权重 |
+| --- | --- | --- | --- | --- |
+| **Libero** | CogACT | 93.6 | - | - |
+|  | **DB-CogACT** | **94.9** | [`libero_cogact.py`](https://www.google.com/search?q=playground/benchmarks/libero/libero_cogact.py) | [🤗 HF](https://huggingface.co/Dexmal/libero-db-cogact) |
+|  | π0 | 94.2 | - | - |
+|  | DB-π0 | 93.9 | [`libero_pi0.py`](https://www.google.com/search?q=playground/benchmarks/libero/libero_pi0.py) | [🤗 HF](https://huggingface.co/Dexmal/libero-db-pi0) |
+|  | MemVLA | 96.7 | - | - |
+|  | **DB-MemVLA** | **97.0** | [`libero_memvla.py`](https://www.google.com/search?q=playground/benchmarks/libero/libero_memvla.py) | [🤗 HF](https://huggingface.co/Dexmal/libero-db-memvla) |
+| **CALVIN** | CogACT | 3.246 | - | - |
+|  | **DB-CogACT** | **4.063** | [`calvin_cogact.py`](https://www.google.com/search?q=playground/benchmarks/calvin/calvin_cogact.py) | [🤗 HF](https://huggingface.co/Dexmal/calvin-db-cogact) |
+|  | OFT | 3.472 | - | - |
+|  | DB-OFT | 3.540 | [`calvin_oft.py`](https://www.google.com/search?q=playground/benchmarks/calvin/calvin_oft.py) | [🤗 HF](https://huggingface.co/Dexmal/calvin-db-oft) |
+| **SimplerEnv** | CogACT | 51.25 | - | - |
+|  | DB-CogACT | 69.45 | [`simpler_cogact.py`](https://www.google.com/search?q=playground/benchmarks/simpler/simpler_cogact.py) | [🤗 HF](https://huggingface.co/Dexmal/simpler-db-cogact) |
+|  | OFT | 30.23 | - | - |
+|  | DB-OFT | 76.39 | [`simpler_oft.py`](https://www.google.com/search?q=playground/benchmarks/simpler/simpler_oft.py) | [🤗 HF](https://huggingface.co/Dexmal/simpler-db-oft) |
+|  | MemVLA | 71.9 | - | - |
+|  | **DB-MemVLA** | **84.4** | [`simpler_memvla.py`](https://www.google.com/search?q=playground/benchmarks/simpler/simpler_memvla.py) | [🤗 HF](https://huggingface.co/Dexmal/simpler-db-memvla) |
+| **ManiSkill2** | CogACT | 40.0 | - | - |
+|  | DB-CogACT | 58.0 | [`maniskill2_cogact.py`](https://www.google.com/search?q=playground/benchmarks/maniskill2/maniskill2_cogact.py) | [🤗 HF](https://huggingface.co/Dexmal/maniskill2-db-cogact) |
+|  | OFT | 21.0 | - | - |
+|  | DB-OFT | 63.0 | [`maniskill2_oft.py`](https://www.google.com/search?q=playground/benchmarks/maniskill2/maniskill2_oft.py) | [🤗 HF](https://huggingface.co/Dexmal/maniskill2-db-oft) |
+|  | **π0** | **66.0** | - | - |
+|  | DB-π0 | 65.0 | [`maniskill2_pi0.py`](https://www.google.com/search?q=playground/benchmarks/maniskill2/maniskill2_pi0.py) | [🤗 HF](https://huggingface.co/Dexmal/maniskill2-db-pi0) |
+| **RoboTwin2.0** | CogACT | 43.8 | - | - |
+|  | **DB-CogACT** | **58.5** | [`robotwin2_cogact.py`](https://www.google.com/search?q=playground/benchmarks/robotwin2/robotwin2_cogact.py) | [🤗 HF](https://huggingface.co/Dexmal/robotwin-db-cogact) |
+
+📊 **查看更多详细评测结果**: [Simulation Results](https://dexbotic.com/docs/7.%20Simulation%20Results.html)
+
+## 未来计划
+
+我们正在积极开发以下新功能，敬请期待：
+
+- 预训练模型：Dexbotic-OFT
+- 导航策略：NaVid、NaVILA、StreamVLN
+
+欢迎您贡献代码和建议，查看 [贡献流程](xxx)。
+
+## 支持我们
+
+我们正在不断改进，更多功能即将推出。如果你喜欢这个项目，请在 GitHub 上给我们点一颗星 ⭐，你的支持是我们前进的动力！
+
+如果 Dexbotic 对您的研究工作有所帮助，请考虑引用我们的技术报告：
+
+```bibtex
+@article{dexbotic,
+  title={Dexbotic: Open-Source Vision-Language-Action Toolbox},
+  author={Dexbotic Contributors},
+  journal={arXiv preprint arXiv:2510.23511},
+  year={2025}
+}
+```
+
+## 许可
+
+本项目采用 [Apache 2.0 许可证](https://www.google.com/search?q=LICENSE)。
