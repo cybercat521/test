@@ -3,10 +3,10 @@
 
   # 一站式具身智能 VLA 开发工具箱
 
-  [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
-  [![Python](https://img.shields.io/badge/Python-3.8%2B-blue)](https://www.python.org/)
   [![Paper](https://img.shields.io/badge/Paper-arXiv-b31b1b.svg)](https://arxiv.org/pdf/2510.23511)
+  [![Python](https://img.shields.io/badge/Python-3.8%2B-blue)](https://www.python.org/)
   [![Documentation](https://img.shields.io/badge/Docs-Online-success)](https://dexbotic.com/docs/)
+  [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 
   <p align="center">
     <strong>预训练 · 微调 · 推理 · 评测</strong><br>
