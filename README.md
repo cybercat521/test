@@ -4,7 +4,7 @@
   # 一站式具身智能 VLA 开发工具箱
 
   [![Paper](https://img.shields.io/badge/Paper-arXiv-b31b1b.svg)](https://arxiv.org/pdf/2510.23511)
-  ![Docker Pulls](https://img.shields.io/docker/pulls/dexmal/dexbotic)
+  [![Docker Pulls](https://img.shields.io/docker/pulls/dexmal/dexbotic)](https://hub.docker.com/r/dexmal/dexbotic)
   [![Documentation](https://img.shields.io/badge/Docs-Online-success)](https://dexbotic.com/docs/)
   [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
