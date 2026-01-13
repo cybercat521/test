@@ -10,7 +10,7 @@
 
   <p align="center">
     <strong>预训练 · 微调 · 推理 · 评测</strong><br>
-    支持 Pi0、CogACT、OFT、RL 等主流策略
+    支持 Pi0、CogACT、OFT、MemVLA 等主流策略
   </p>
 </div>
 
@@ -54,13 +54,12 @@ cd /dexbotic
 conda activate dexbotic
 pip install -e .
 ```
+> **系统要求**：Ubuntu 20.04/22.04，推荐使用 RTX 4090、A100 或 H100（训练建议 8 GPU，部署需 1 GPU）。
 
 <details>
 <summary>在 Blackwell GPU 上使用</summary>
 
-对于使用 Blackwell 架构 GPU（例如 B100, RTX 5090）的用户，请使用专用的 Docker 镜像 `dexmal/dexbotic:c130t28`。
-
-**步骤 1：使用 Blackwell 镜像启动 Docker**
+对于使用 Blackwell 架构 GPU（例如 B100、RTX 5090）的用户，请使用专用的 Docker 镜像 `dexmal/dexbotic:c130t28`。
 
 ```bash
 # 1. 使用 Blackwell 镜像启动 Docker
@@ -75,8 +74,6 @@ pip install -e .
 ```
 
 </details>
-
-> **系统要求**：Ubuntu 20.04/22.04，推荐使用 RTX 4090、A100 或 H100（训练建议 8 GPU，部署需 1 GPU）。
 
 ### 2. 使用指南
 
@@ -93,6 +90,8 @@ pip install -e .
 ![](demo.png)
 
 📊 **查看更多详细评测结果**: [Simulation Results](https://dexbotic.com/docs/7.%20Simulation%20Results.html)
+
+<table style="width: 100%; table-layout: fixed; border-collapse: collapse;"> <thead align="center" style="background-color: #f6f8fa;"> <tr> <th style="padding: 10px; border: 1px solid #dfe2e5;">Libero</th> <th style="padding: 10px; border: 1px solid #dfe2e5;">CALVIN</th> <th style="padding: 10px; border: 1px solid #dfe2e5;">SimplerEnv</th> <th style="padding: 10px; border: 1px solid #dfe2e5;">ManiSkill2</th> <th style="padding: 10px; border: 1px solid #dfe2e5;">RoboTwin2.0</th> </tr> </thead> <tbody valign="top"> <tr> <td style="padding: 10px; border: 1px solid #dfe2e5;"> <ul style="margin-left: 0; padding-left: 20px; margin-top: 0;"> <li>CogACT: 93.6</li> <li>DB-CogACT: 94.9</li> <li>π0: 94.2</li> <li>DB-π0: 93.9</li> <li>MemVLA: 96.7</li> <li><b>DB-MemVLA: 97.0</b></li> </ul> </td> <td style="padding: 10px; border: 1px solid #dfe2e5;"> <ul style="margin-left: 0; padding-left: 20px; margin-top: 0;"> <li>CogACT: 3.246</li> <li><b>DB-CogACT: 4.063</b></li> <li>OFT: 3.472</li> <li>DB-OFT: 3.540</li> </ul> </td> <td style="padding: 10px; border: 1px solid #dfe2e5;"> <ul style="margin-left: 0; padding-left: 20px; margin-top: 0;"> <li>CogACT: 51.25</li> <li>DB-CogACT: 69.45</li> <li>OFT: 30.23</li> <li>DB-OFT: 76.39</li> <li>MemVLA: 71.9</li> <li><b>DB-MemVLA: 84.4</b></li> </ul> </td> <td style="padding: 10px; border: 1px solid #dfe2e5;"> <ul style="margin-left: 0; padding-left: 20px; margin-top: 0;"> <li>CogACT: 40</li> <li>DB-CogACT: 58</li> <li>OFT: 21</li> <li>DB-OFT: 63</li> <li><b>π0: 66</b></li> <li>DB-π0: 65</li> </ul> </td> <td style="padding: 10px; border: 1px solid #dfe2e5;"> <ul style="margin-left: 0; padding-left: 20px; margin-top: 0;"> <li>CogACT: 43.8</li> <li><b>DB-CogACT: 58.5</b></li> </ul> </td> </tr> </tbody> </table>
 
 ## 未来计划
 
