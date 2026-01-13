@@ -6,7 +6,7 @@
   [![Paper](https://img.shields.io/badge/Paper-arXiv-b31b1b.svg)](https://arxiv.org/pdf/2510.23511)
   [![Python](https://img.shields.io/badge/Python-3.8%2B-blue)](https://www.python.org/)
   [![Documentation](https://img.shields.io/badge/Docs-Online-success)](https://dexbotic.com/docs/)
-  [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
+  [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
   <p align="center">
     <strong>预训练 · 微调 · 推理 · 评测</strong><br>
@@ -55,6 +55,27 @@ conda activate dexbotic
 pip install -e .
 ```
 
+<details>
+<summary>在 Blackwell GPU 上使用</summary>
+
+对于使用 Blackwell 架构 GPU（例如 B100, RTX 5090）的用户，请使用专用的 Docker 镜像 `dexmal/dexbotic:c130t28`。
+
+**步骤 1：使用 Blackwell 镜像启动 Docker**
+
+```bash
+# 1. 使用 Blackwell 镜像启动 Docker
+docker run -it --rm --gpus all --network host \
+  -v /path/to/dexbotic:/dexbotic \
+  dexmal/dexbotic:c130t28 \
+  bash
+
+# 2. 激活环境**
+cd /dexbotic
+pip install -e .
+```
+
+</details>
+
 > **系统要求**：Ubuntu 20.04/22.04，推荐使用 RTX 4090、A100 或 H100（训练建议 8 GPU，部署需 1 GPU）。
 
 ### 2. 使用指南
@@ -80,8 +101,6 @@ pip install -e .
 - 预训练模型：Dexbotic-OFT
 - 导航策略：NaVid、NaVILA、StreamVLN
 
-欢迎您贡献代码和建议，查看 [贡献流程](xxx)。
-
 ## 支持我们
 
 我们正在不断改进，更多功能即将推出。如果你喜欢这个项目，请在 GitHub 上给我们点一颗星 [![GitHub](https://img.shields.io/github/stars/dexmal/dexbotic?color=5B5BD6)](https://github.com/dexmal/dexbotic)，你的支持是我们前进的动力！
@@ -99,4 +118,4 @@ pip install -e .
 
 ## 许可
 
-本项目采用 [Apache 2.0 许可证](LICENSE)。
+本项目采用 [MIT 许可证](LICENSE)。
