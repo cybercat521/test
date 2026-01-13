@@ -5,7 +5,7 @@
 
   [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
   [![Python](https://img.shields.io/badge/Python-3.8%2B-blue)](https://www.python.org/)
-  [![Paper](https://img.shields.io/badge/Paper-arXiv-b31b1b.svg)](docs/Dexbotic_Tech_Report.pdf)
+  [![Paper](https://img.shields.io/badge/Paper-arXiv-b31b1b.svg)](https://arxiv.org/pdf/2510.23511)
   [![Documentation](https://img.shields.io/badge/Docs-Online-success)](https://dexbotic.com/docs/)
 
   <p align="center">
@@ -30,7 +30,7 @@
 
 - **[2026-01-08]** 🆕 新增 **联合训练 (Co-training)** 能力，支持对 CogACT 模型的动作专家和 LLM 进行联合优化。同时发布适配 **Blackwell GPU** 的专用镜像。
 - **[2025-12-29]** 全面支持 **OFT** 和 **Pi0.5** 模型。
-- **[2025-10-20]** Dexbotic 正式发布！详情请查阅 [技术报告](docs/Dexbotic_Tech_Report.pdf) 和 [官方文档](https://dexbotic.com/docs/)。
+- **[2025-10-20]** Dexbotic 正式发布！详情请查阅 [技术报告](https://arxiv.org/pdf/2510.23511) 和 [官方文档](https://dexbotic.com/docs/)。
 
 
 ## 快速开始
@@ -62,7 +62,7 @@ pip install -e .
 - [运行预训练模型](https://dexbotic.com/docs/2.%20Get%20Start.html#_2-run-a-pretrained-model)
 - [基于仿真数据训练](https://dexbotic.com/docs/2.%20Get%20Start.html#_3-train-on-provided-simulator-data)
 - [测试与评估](https://dexbotic.com/docs/2.%20Get%20Start.html#_4-test-your-trained-model)
-- [完整的使用手册](https://dexbotic.com/docs/)
+- [完整的官方文档](https://dexbotic.com/docs/)
 
 
 ## 基准测试
@@ -70,7 +70,6 @@ pip install -e .
 以下展示了基于 Dexbotic 训练的模型与原始模型在主流仿真环境下的评测结果对比。*(注：加粗项为该任务下的最佳表现)*
 
 ![](demo.png)
-
 
 📊 **查看更多详细评测结果**: [Simulation Results](https://dexbotic.com/docs/7.%20Simulation%20Results.html)
 
@@ -87,7 +86,7 @@ pip install -e .
 
 我们正在不断改进，更多功能即将推出。如果你喜欢这个项目，请在 GitHub 上给我们点一颗星 ⭐，你的支持是我们前进的动力！
 
-如果 Dexbotic 对您的研究工作有所帮助，请考虑引用我们的技术报告：
+如果 Dexbotic 对你的研究工作有所帮助，请考虑引用我们的技术报告：
 
 ```bibtex
 @article{dexbotic,
