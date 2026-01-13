@@ -10,7 +10,7 @@
 
   <p align="center">
     <strong>预训练 · 微调 · 推理 · 评测</strong><br>
-    支持 Pi0、CogACT、OFT、MemoryVLA 等主流策略
+    支持 Pi0、CogACT、OFT、RL 等主流策略
   </p>
 </div>
 
@@ -21,7 +21,7 @@
 - **开箱即用的 VLA 框架**：以 VLA 模型为核心，集成了具身操作和导航功能，原生支持多种业内领先的策略。
 - **强大的预训练基座**：针对 Pi0 和 CogACT 等主流策略，提供了多个基于 Dexbotic 优化的预训练模型。
 - **模块化开发架构**：采用“分层配置 + 工厂注册 + 入口分发”的设计模式。用户只需修改配置脚本，即可轻松完成参数修改、模型更换或任务扩展。
-- **混合训练支持**：无缝衔接云端与本地环境，支持阿里云、火山引擎等大规模云端集群，统计适配消费级 GPU 进行本地训练。
+- **混合训练支持**：无缝衔接云端与本地环境，支持阿里云、火山引擎等大规模云端集群，同时适配消费级 GPU 进行本地训练。
 - **广泛的机器人适配**：针对 UR5、Franka 和 ALOHA 等主流机器人平台，提供了**统一的训练数据格式**，大幅降低数据处理成本。
 
 ![](intro.jpeg)
@@ -43,7 +43,7 @@
 # 1. 克隆代码仓库
 git clone https://github.com/dexmal/dexbotic.git
 
-# 2. 启动 Docker 容器 (推荐)
+# 2. 启动 Docker 容器
 docker run -it --rm --gpus all --network host \
   -v $(pwd)/dexbotic:/dexbotic \
   dexmal/dexbotic \
@@ -67,7 +67,7 @@ pip install -e .
 
 ## 基准测试
 
-以下展示了基于 Dexbotic 训练的模型与原始模型在主流仿真环境下的评测结果对比。*(注：加粗项为该任务下的最佳表现)*
+以下展示了基于 Dexbotic 训练的模型与原始模型在主流仿真环境下的评测结果对比。
 
 ![](demo.png)
 
@@ -84,7 +84,7 @@ pip install -e .
 
 ## 支持我们
 
-我们正在不断改进，更多功能即将推出。如果你喜欢这个项目，请在 GitHub 上给我们点一颗星 ⭐，你的支持是我们前进的动力！
+我们正在不断改进，更多功能即将推出。如果你喜欢这个项目，请在 GitHub 上给我们点一颗星 [![GitHub](https://img.shields.io/github/stars/dexmal/dexbotic?color=5B5BD6)](https://github.com/dexmal/dexbotic)，你的支持是我们前进的动力！
 
 如果 Dexbotic 对你的研究工作有所帮助，请考虑引用我们的技术报告：
 
@@ -99,4 +99,4 @@ pip install -e .
 
 ## 许可
 
-本项目采用 [Apache 2.0 许可证](https://www.google.com/search?q=LICENSE)。
+本项目采用 [Apache 2.0 许可证](LICENSE)。
