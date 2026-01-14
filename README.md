@@ -7,6 +7,7 @@
   [![Hugging Face](https://img.shields.io/badge/Hugging%20Face-FFD21E?logo=huggingface&logoColor=black)](https://huggingface.co/Dexmal)
   [![Documentation](https://img.shields.io/badge/Docs-Online-success)](https://dexbotic.com/docs/)
   [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+  [![Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-blue)](https://huggingface.co/YourUsername)
 
   <p align="center">
     <strong>预训练 · 微调 · 推理 · 评测</strong><br>
