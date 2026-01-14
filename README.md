@@ -7,7 +7,7 @@
   [![Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97-Hugging%20Face-yellow)](https://huggingface.co/Dexmal)
   [![Documentation](https://img.shields.io/badge/Docs-Online-success)](https://dexbotic.com/docs/)
   [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-  [![English](https://img.shields.io/badge/lang-English-red.svg)](README.md)
+  [![Chinese](https://img.shields.io/badge/%E8%AF%AD%E8%A8%80-%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87-red.svg)](README.zh-CN.md)
 
   <p align="center">
     <strong>预训练 · 微调 · 推理 · 评测</strong><br>
@@ -25,7 +25,7 @@
 - **云端与本地一体化训练**：全面支持云端与本地训练需求，支持阿里云、火山引擎等云训练平台，同时适配消费级 GPU 进行本地训练。
 - **广泛的机器人适配**：针对 UR5、Franka 和 ALOHA 等主流机器人，提供了**统一的训练数据格式**和部署脚本。
 
-![](resources/intro.jpeg)
+![](resources/intro.png)
 
 ## 🔥 最新动态
 
