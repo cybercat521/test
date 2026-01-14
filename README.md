@@ -1,5 +1,7 @@
 <div align="center">
   <img src="logo.png" alt="Dexbotic Logo" width="280"/>
+  <img src="logo2.png" alt="Dexbotic Logo" width="280"/>
+
 
   # 一站式具身智能 VLA 开发工具箱
 
