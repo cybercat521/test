@@ -1,12 +1,10 @@
 <div align="center">
   <img src="logo.png" alt="Dexbotic Logo" width="280"/>
-  <img src="logo2.png" alt="Dexbotic Logo" width="280"/>
-
 
   # 一站式具身智能 VLA 开发工具箱
 
   [![Paper](https://img.shields.io/badge/Paper-arXiv-b31b1b.svg)](https://arxiv.org/pdf/2510.23511)
-  [![Docker Pulls](https://img.shields.io/docker/pulls/dexmal/dexbotic)](https://hub.docker.com/r/dexmal/dexbotic)
+  [![Hugging Face](https://img.shields.io/badge/Hugging%20Face-FFD21E?logo=huggingface&logoColor=black)](https://huggingface.co/Dexmal)
   [![Documentation](https://img.shields.io/badge/Docs-Online-success)](https://dexbotic.com/docs/)
   [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
