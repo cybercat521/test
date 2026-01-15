@@ -1,3 +1,16 @@
+### SimplerEnv
+
+| Model | Average | spoon_on_towel | carrot_on_plate | stack_cube | put_eggplant_in_basket |
+| --- | --- | --- | --- | --- | --- |
+| CogACT | 51.25 | 71.7 | 50.8 | 15 | 67.5 |
+| DB-CogACT | 69.45 | 87.5 | 65.28 | 29.17 | 95.83 |
+| OFT | 30.23 | 12.5 | 4.2 | 4.2 | 100 |
+| DB-OFT | 76.39 | 91.67 | 76.39 | 43.06 | 94.44 |
+| MemVLA | 71.9 | 75.0 | 75.0 | 37.5 | 100.0 |
+| DB-MemVLA | 84.4 | 100.0 | 66.7 | 70.8 | 100.0 |
+
+
+
 | Model | Spoon  Towel | Carrot  Plate | Stack (Green  Yellow) | Eggplant  Basket | Average |
 | --- | --- | --- | --- | --- | --- |
 | **CogACT** | 71.7 | 50.8 | 15.0 | 67.5 | 51.25 |
